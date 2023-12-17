@@ -1,0 +1,170 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Set a lower z-index to move it behind other elements */
+}
+
+iframe {
+    width: 100vw;
+    height: 56.25vw; /* 16:9 aspect ratio */
+    min-height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(5);
+}
+
+.chat-container {
+    /* Add a higher z-index to make it appear above the video */
+    z-index: 1;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Add the following animation styles */
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.chat-header {
+    background-color: #0095f6;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Existing styles ... */
+
+.chat-messages {
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 300px;
+    /* Add the following animation styles */
+    position: relative;
+}
+
+/* Animation for a subtle sparkling effect */
+/* Existing styles ... */
+
+/* Animation for a subtle sparkling effect */
+@keyframes sparkle {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+.sparkle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0) 70%);
+    animation: sparkle 2s forwards; /* Adjust the duration here */
+}
+
+/* Existing styles ... */
+
+
+/* Existing styles ... */
+
+
+.message {
+    margin-bottom: 15px;
+}
+
+
+.message p {
+    padding: 10px;
+    border-radius: 12px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.message p.left {
+    background-color: #dbedf3;
+}
+
+.message p.right {
+    background-color: #0095f6;
+    color: #fff;
+    text-align: right;
+}
+
+
+
+
+.input-container {
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    display: flex;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    margin-right: 10px;
+}
+
+.input-container button {
+    padding: 10px 15px;
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Existing styles ... */
+
+/* Existing styles ... */
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px; /* Set a maximum height for the logo */
+    margin: 20px auto 0; /* Center the logo at the top */
+    display: block; /* Ensure the logo is a block-level element */
+    text-align: center; /* Center the logo horizontally */
+}
+
+/* Existing styles ... */
+
+
+/* Existing styles ... */
