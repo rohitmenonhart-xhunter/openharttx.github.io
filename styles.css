@@ -28,13 +28,14 @@ iframe {
 .chat-container {
     /* Add a higher z-index to make it appear above the video */
     z-index: 1;
-    max-width: 400px;
+    max-width: 550px;
     margin: 20px auto;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     /* Add the following animation styles */
+    height: 800px;
     animation: pulse 5s infinite;
 }
 
@@ -69,11 +70,11 @@ iframe {
 /* Existing styles ... */
 
 .chat-messages {
-    padding: 15px;
+    padding: 20px;
     overflow-y: auto;
-    max-height: 300px;
-    /* Add the following animation styles */
-    position: relative;
+    max-height: calc(100% - 100px); /* Adjust the max-height as needed */
+    margin-top: 490px; /* Push to the bottom */
+    width: 100%;
 }
 
 /* Animation for a subtle sparkling effect */
